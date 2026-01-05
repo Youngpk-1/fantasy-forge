@@ -1,11 +1,16 @@
 class HealPotion {
-  constructor(name, healAmount, charges) {
+  name: string;
+  healAmount: number;
+  charges: number;
+
+
+  constructor(name: string, healAmount: number, charges: number) {
     this.name = name;
     this.healAmount = healAmount;
     this.charges = charges;
   }
 
-  use(target) {
+  use(target: {name: string; heal: (amount:number) => void}) {
     if (this.charges > 0) {
       this.charges--;
       target.heal(this.healAmount);
@@ -17,7 +22,7 @@ class HealPotion {
     }
   }
 
-  recharge(amount) {
+  recharge(amount:number) {
     this.charges += amount;
     console.log(`${this.name} recharged! New charges: ${this.charges}`);
   }

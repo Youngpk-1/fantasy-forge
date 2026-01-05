@@ -1,4 +1,4 @@
-import { Adventurer } from "../models/Adventurer.js";
+import { Adventurer } from "../models/Adventurer.ts";
 
 console.log("Fantasy Forge initialized!");
 // src/games/game-1.mjs

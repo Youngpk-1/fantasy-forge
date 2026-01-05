@@ -1,19 +1,22 @@
 class Monster {
-    constructor(name, health, damage) {
+    name: string;
+    health: number;
+    damage: number;
+
+    constructor(name: string, health: number, damage: number ) {
         this.name = name;
         this.health = health;
         this.damage = damage;
     }
 
     roar() {
-        // TODO: Log a scary message using this.name
+        console.log (`${this.name} makes a loud scary roar`)
     }
 
-    attack(target) {
+    attack(target: {name:string; receiveDamage: (amoumt:number )=>void}) {
         console.log(`${this.name} bites ${target.name} for ${this.damage} damage!`);
-        // TODO: Apply damage to the target. 
-        // Hint: target.receiveDamage(this.damage);
-    }
-}
-export { Monster };
+        target.receiveDamage(this.damage)
+        
+}}
+    export { Monster };
 

@@ -1,5 +1,5 @@
-import { Adventurer } from "../models/Adventurer.js";
-import { HealPotion } from "../models/HealPotion.js";
+import { Adventurer } from "../models/Adventurer.ts";
+import { HealPotion } from "../models/HealPotion.ts";
 
 // Cast of Characters
 const sirBrave = new Adventurer("Sir Brave", 100);

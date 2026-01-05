@@ -1,18 +1,23 @@
 // src/models/Adventurer.mjs
 
 class Adventurer {
-  constructor(name, health) {
+
+name: string;
+health: number;
+
+
+  constructor(name: string, health: number) {
     this.name = name;
     this.health = health;
     
   }
 
-  receiveDamage(amount) {
+  receiveDamage(amount: number): void {
     this.health -= amount;
     console.log(`${this.name} received ${amount} damage. Current health: ${this.health}`);
   }
 
-  heal(amount) {
+  heal(amount: number): void {
     this.health += amount;
     console.log(`${this.name} healed ${amount} health. Current health: ${this.health}`);
   }
